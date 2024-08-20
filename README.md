@@ -1,6 +1,7 @@
+### Scratchattach:
 Scratch API wrapper with support for almost all site features. Created by [TimMcCool](https://scratch.mit.edu/users/TimMcCool/).
 
-This library can set cloud variables, follow Scratchers, post comments and do so much more! It has special features that make it easy to transmit data through cloud variables.
+Scratchattach allows Scratch to interact with Python. This library can set cloud variables, follow Scratchers, post comments and do so much more! It has special features that make it easy to transmit data through cloud variables.
 
 <p align="left">
   <img width="160" height="133" src="https://github.com/TimMcCool/scratchattach/blob/main/logos/logo_dark_transparent_eyes.svg">
@@ -25,12 +26,17 @@ Report bugs by opening an issue on this repository. If you need help or guideanc
 # Example usage
 
 ```py
-import scratchattach as scratch3
+# Example code:                                               
+# Set a cloud variable inside a Scratch project using Python! 
 
-session = scratch3.login("username", "password")
-conn = session.connect_cloud("project_id")
+import scratchattach as scratch3 # Import the module
 
-conn.set_var("variable", value)
+# Log in using your Scratch crediantals, to give you admin access over your Scratch project
+session = scratch3.login("username", "password") # Replace "username" and "password" with your information.
+conn = session.connect_cloud("project_id") # Replace "project_id" with the desired scratch project ID. 
+
+# Set a cloud variable named "variable" to value. 
+conn.set_var("variable", value) # Value must be int as cloud variables only support numbers!
 ```
 
 **[More examples](https://github.com/TimMcCool/scratchattach/wiki/Examples)**
